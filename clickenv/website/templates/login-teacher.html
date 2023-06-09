@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h3 align="center">Teacher sign in</h3>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+        />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+        />
+    </div>
+    <br />
+    <form action="/action_page.php">
+        <input type="checkbox" id="vehicle3" name="remember" value="Boat">
+        <label for="vehicle3"> Remember me</label>
+        <a class="nav-item nav-link" style="float: right;" id="recover1" href="/login-teacher/forget-password">Forgot password?</a>
+    </form>
+    <br />
+    <button type="submit" class="btn btn-primary">Continue</button><br>
+    <div style="text-align: center;">
+        <a class="nav-item nav-link" id="login" href="/signup">Not a member? Signup Now</a>
+    </div>
+</form>
+{% endblock %}
